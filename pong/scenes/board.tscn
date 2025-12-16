@@ -1,7 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://dtchwqlmtjm83"]
+[gd_scene load_steps=5 format=3 uid="uid://dtchwqlmtjm83"]
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yqjtg"]
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_id3w2"]
 normal = Vector2(0, 1)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_bw3vb"]
+normal = Vector2(1, 0)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tx6nw"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_nglv8"]
+normal = Vector2(-1, 0)
 
 [node name="BOARD" type="Node2D"]
 
@@ -14,6 +22,18 @@ color = Color(0.12591085, 0.12591085, 0.12591082, 1)
 
 [node name="borders" type="StaticBody2D" parent="."]
 
-[node name="top" type="CollisionShape2D" parent="borders"]
-position = Vector2(48, 0)
-shape = SubResource("WorldBoundaryShape2D_yqjtg")
+[node name="border_top" type="CollisionShape2D" parent="borders"]
+position = Vector2(168, 8)
+shape = SubResource("WorldBoundaryShape2D_id3w2")
+
+[node name="border_left" type="CollisionShape2D" parent="borders"]
+position = Vector2(16, 96)
+shape = SubResource("WorldBoundaryShape2D_bw3vb")
+
+[node name="border_bottom" type="CollisionShape2D" parent="borders"]
+position = Vector2(128, 640)
+shape = SubResource("WorldBoundaryShape2D_tx6nw")
+
+[node name="border_right" type="CollisionShape2D" parent="borders"]
+position = Vector2(1144, 64)
+shape = SubResource("WorldBoundaryShape2D_nglv8")

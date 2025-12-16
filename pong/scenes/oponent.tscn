@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://chvsu0af2ufge" path="res://icon.svg" id="1_3picq"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3picq"]
-radius = 16.0
+radius = 24.0
 height = 206.0
 
 [node name="OPONENT" type="Node2D"]
